@@ -1,42 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
-    <title>음식 추천 사이트</title>
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js"></script>
-  </head>
-  <body>
-    <div
-      style="
+    <title>점심 메뉴 추천</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #fffbf0;
         text-align: center;
-      "
-    >
-      <div
-        id="food"
-        style="margin: auto; height: 400px; font-size: 100px"
-      ></div>
-      <button
-        style="
-          height: 80px;
-          background-color: white;
-          margin: 20px;
-          font-size: 80px;
-        "
-        onclick="selectFood()"
-      >
-        다시돌려.
-      </button>
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      #menu {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 15px 0;
+        color: #ff5722;
+      }
+      button {
+        background: #ff9800;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        font-size: 18px;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:hover {
+        background: #e68900;
+      }
+      p {
+        height: 300px;
+        line-height: 300px;
+        font-size: 50px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>오늘 뭐 먹지? 🍽️</h1>
+      <p id="menu"></p>
+      <button onclick="selectFood()">추천하기</button>
     </div>
   </body>
 </html>

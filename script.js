@@ -3,7 +3,7 @@ onload = () => {
 };
 
 function selectFood() {
-  const foodDiv = document.getElementById("food");
+  const foodDiv = document.getElementById("menu");
   fetch("./food.json")
     .then((response) => response.json())
     .then((foodList) => {
